@@ -32,11 +32,20 @@ function hendleClick(event) {
     }
 
     const modalOn = basicLightbox.create(
-    `<img src="${event.target.dataset.sourse}" />`
+    `<img src="${event.target.dataset.source}" />`
     )
-    modalOn.show()
-    
+  modalOn.show()
+
+  galery.addEventListener('keydown', modalClose)
+  
+  function modalClose(event) {
+    if (event.key === 'Escape') {
+      modalOn.close()
+    }
+  }
 }
+
+
 
 
 
