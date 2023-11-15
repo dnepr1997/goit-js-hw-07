@@ -16,15 +16,6 @@ function createMurkup(arr) {
 </li>`
     ).join("")
 }
-
-galery.addEventListener('click', hendleClick)
-
-function hendleClick(event) {
-    event.preventDefault()
-    if (event.target === event.currentTarget) {
-        return
-    }
-}
 let lightbox = new SimpleLightbox('.gallery a', { 
     captionPosition: 'bottom',
     captionDelay: 250,
